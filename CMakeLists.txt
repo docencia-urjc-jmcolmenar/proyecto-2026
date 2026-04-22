@@ -7,4 +7,6 @@ add_executable(proyecto-2026 main.cpp
         Coche.h
         Coche.cpp
         Moto.h
-        Moto.cpp)
+        Moto.cpp
+        Cliente.cpp
+        Cliente.h)
