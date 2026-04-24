@@ -11,4 +11,6 @@ add_executable(proyecto-2026 main.cpp
         Cliente.cpp
         Cliente.h
         Fecha.cpp
-        Fecha.h)
+        Fecha.h
+        Persistencia.cpp
+        Persistencia.h)

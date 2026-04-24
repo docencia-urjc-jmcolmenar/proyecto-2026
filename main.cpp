@@ -4,6 +4,7 @@
 #include "Coche.h"
 #include "Fecha.h"
 #include "Moto.h"
+#include "Persistencia.h"
 //
 // @Author José Manuel Colmenar
 //
@@ -22,6 +23,10 @@ void pruebaClaseCoche() {
     // Muestra fichas
     std::cout << c1.obtenerFicha() << std::endl << std::endl;
     std::cout << c2.obtenerFicha() << std::endl;
+
+    // Guarda los coches en fichero
+    Persistencia::guardaCoche(c1);
+    Persistencia::guardaCoche(c2);
 }
 
 // Prueba de dos objetos Moto

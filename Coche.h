@@ -29,6 +29,7 @@ public:
     void setKilometraje(long kilometraje);
     // Otros métodos
     std::string obtenerFicha();
+    std::string aplanaObjeto();
 };
 
 

@@ -30,3 +30,15 @@ void Coche::setKilometraje(long kilometraje) {
 std::string Coche::obtenerFicha() {
     return "Matricula: " + matricula + "\nMarca: " + marca + "\nModelo: " + modelo + "\nKilometraje: " + std::to_string(kilometraje);
 }
+
+std::string Coche::aplanaObjeto() {
+    // Genera un string con un JSON que describe todos los atributos del coche:
+    std::string json = "{";
+    json += "\"matricula\": \"" + matricula + "\", ";
+    json += "\"marca\": \"" + marca + "\", ";
+    json += "\"modelo\": \"" + modelo + "\", ";
+    json += "\"kilometraje\": " + std::to_string(kilometraje);
+    json += "}";
+    return json;
+    return "El coche se ha aplanado";
+}
