@@ -4,7 +4,7 @@
 
 #ifndef PROYECTO_2026_FECHA_H
 #define PROYECTO_2026_FECHA_H
-
+#include <string>
 
 
 class Fecha {
@@ -22,6 +22,7 @@ public:
     bool setMes(int mes);
     bool setAnio(int anio);
     int diferenciaCon(Fecha fecha);
+    std::string toString();
 };
 
 

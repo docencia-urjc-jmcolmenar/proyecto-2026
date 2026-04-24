@@ -7,6 +7,15 @@
 #include <iostream>
 #include <ctime>
 
+// El constructor sin parámetros genera la fecha actual
+Fecha::Fecha() {
+    std::time_t t = std::time(nullptr);
+    std::tm* tm = std::localtime(&t);
+    dia = tm->tm_mday;
+    mes = tm->tm_mon + 1; // tm_mon es 0-11
+    anio = tm->tm_year + 1900; // tm_year es años desde 1900
+}
+
 Fecha::Fecha(int dia, int mes, int anio) {
     if (setDia(dia) && setMes(mes) && setAnio(anio)) {
         // TODO: habría que comprobar los meses con el día (que no haya 31 de abril, ...)
@@ -50,4 +59,8 @@ int Fecha::diferenciaCon(Fecha fecha) {
     std::tm tm1 = {0, 0, 0, dia, mes - 1, anio - 1900}; // tm_mon es 0-11 y tm_year es años desde 1900
     std::tm tm2 = {0, 0, 0, fecha.getDia(), fecha.getMes() - 1, fecha.getAnio() - 1900};
     return (difftime(mktime(&tm1), mktime(&tm2)) / 86400); // Convertir segundos a días
+}
+
+std::string Fecha::toString() {
+    return std::to_string(dia) + "/" + std::to_string(mes) + "/" + std::to_string(anio);
 }

@@ -69,6 +69,9 @@ void pruebaFecha() {
     fechaIncorrecta.setAnio(2024);
     std::cout << std::endl << "--- Prueba diferencia fechas" << std::endl;
     std::cout << fecha.diferenciaCon(fechaIncorrecta) << std::endl;
+
+    Fecha fechaActual;
+    std::cout << "Fecha actual: " << fechaActual.toString() << std::endl;
 }
 
 int main() {
