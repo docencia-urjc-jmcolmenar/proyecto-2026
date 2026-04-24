@@ -47,6 +47,8 @@ void pruebaClaseCliente() {
     // Construccion de objetos
     Cliente cl1("Juan Pérez","juan@email.com","B");
     Cliente cl2("María Gómez","maria@email.com","B");
+    Fecha fechaCarnet(24,03,2026);
+    cl2.setFechaCarnet(fechaCarnet);
 
     // Muestra datos usando getters:
     std::cout << cl1.getNombre() << std::endl;
@@ -56,6 +58,7 @@ void pruebaClaseCliente() {
     std::cout << cl2.getNombre() << std::endl;
     std::cout << cl2.getCorreoElectronico() << std::endl;
     std::cout << cl2.getTipoCarnet() << std::endl;
+    std::cout << "Antigüedad (días) de carnet: " << cl2.antiguedadCarnet() << std::endl;
 }
 
 

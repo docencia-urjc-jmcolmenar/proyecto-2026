@@ -24,8 +24,16 @@ void Cliente::setTipoCarnet(std::string tipoCarnet) {
     this->tipoCarnet = tipoCarnet;
 }
 
+void Cliente::setFechaNacimiento(Fecha fechaNacimiento) {
+    this->fechaNacimiento = fechaNacimiento;
+}
+
+void Cliente::setFechaCarnet(Fecha fechaCarnet) {
+    this->fechaObtencionCarnet = fechaCarnet;
+}
+
 int Cliente::antiguedadCarnet() {
-    // TODO: método pendiente de incluir fechas como atributos
-    return 0;
+    Fecha fechaActual;
+    return fechaActual.diferenciaCon(fechaObtencionCarnet);
 }
 
