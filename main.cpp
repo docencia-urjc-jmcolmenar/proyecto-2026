@@ -24,9 +24,22 @@ void pruebaClaseCoche() {
     std::cout << c1.obtenerFicha() << std::endl << std::endl;
     std::cout << c2.obtenerFicha() << std::endl;
 
+    // Prueba aplanado
+    Coche c3 = Coche(c1.aplanaObjeto());
+    std::cout << std::endl << "Ficha del coche Ford aplanado y reconstruido" << std::endl;
+    std::cout << c3.obtenerFicha() << std::endl;
+
+
     // Guarda los coches en fichero
     Persistencia::guardaCoche(c1);
     Persistencia::guardaCoche(c2);
+
+    // Muestra los coches almacenados
+    std::cout << std::endl << "Coches almacenados en fichero:" << std::endl;
+    // El siguiente bucle itera sobre el vector directamente
+    for (Coche c : Persistencia::cargaCoches()) {
+        std::cout << c.obtenerFicha() << std::endl << std::endl;
+    }
 }
 
 // Prueba de dos objetos Moto

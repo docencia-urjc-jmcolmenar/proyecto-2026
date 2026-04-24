@@ -16,6 +16,7 @@ private:
 public:
     // Constructores
     Coche() {}
+    Coche(std::string cadenaJSON);
     Coche(std::string matricula, std::string marca, std::string modelo);
     // Getters (definición inline)
     std::string getMatricula() { return matricula; }

@@ -5,6 +5,7 @@
 #ifndef PROYECTO_2026_PERSISTENCIA_H
 #define PROYECTO_2026_PERSISTENCIA_H
 #include <string>
+#include <vector>
 #include "Coche.h"
 
 class Persistencia {
@@ -12,6 +13,7 @@ private:
     static const std::string nombreFichero;
 public:
     static bool guardaCoche(Coche c);
+    static std::vector<Coche> cargaCoches();
 };
 
 
