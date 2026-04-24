@@ -3,6 +3,7 @@
 #include "Cliente.h"
 #include "Coche.h"
 #include "Moto.h"
+#include "gtest/gtest.h"
 //
 // @Author José Manuel Colmenar
 //
@@ -40,33 +41,34 @@ void pruebaClaseMoto() {
 }
 
 // Prueba de dos objetos Cliente
-void pruebaClaseCliente() {
-    std::cout << std::endl << "--- Prueba de dos objetos Cliente" << std::endl;
+TEST(ClaseCliente, DosObjetos) {
 
-    // Construccion de objetos
     Cliente cl1("Juan Pérez","juan@email.com","B");
-    Cliente cl2("María Gómez","maria@email.com","B");
+    Cliente cl2("María Gómez","maria@email.com","A");
 
-    // Muestra datos usando getters:
-    std::cout << cl1.getNombre() << std::endl;
-    std::cout << cl1.getCorreoElectronico() << std::endl;
-    std::cout << cl1.getTipoCarnet() << std::endl << std::endl;
+    ASSERT_EQ("Juan Pérez", cl1.getNombre());
+    ASSERT_EQ("juan@email.com", cl1.getCorreoElectronico());
+    ASSERT_EQ("B", cl1.getTipoCarnet());
 
-    std::cout << cl2.getNombre() << std::endl;
-    std::cout << cl2.getCorreoElectronico() << std::endl;
-    std::cout << cl2.getTipoCarnet() << std::endl;
+    ASSERT_EQ("María Gómez", cl2.getNombre());
+    ASSERT_EQ("maria@email.com", cl2.getCorreoElectronico());
+    ASSERT_EQ("A", cl2.getTipoCarnet());
+}
+
+int runTests() {
+    testing::InitGoogleTest();
+    return RUN_ALL_TESTS();
 }
 
 int main() {
+
+    runTests();
 
     // Prueba coches
     pruebaClaseCoche();
 
     // Prueba motos
     pruebaClaseMoto();
-
-    // Prueba cliente
-    pruebaClaseCliente();
 
     return 0;
 }
