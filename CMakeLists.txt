@@ -9,4 +9,6 @@ add_executable(proyecto-2026 main.cpp
         Moto.h
         Moto.cpp
         Cliente.cpp
-        Cliente.h)
+        Cliente.h
+        Fecha.cpp
+        Fecha.h)

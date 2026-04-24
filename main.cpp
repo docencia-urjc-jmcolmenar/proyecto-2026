@@ -2,6 +2,7 @@
 
 #include "Cliente.h"
 #include "Coche.h"
+#include "Fecha.h"
 #include "Moto.h"
 //
 // @Author José Manuel Colmenar
@@ -57,6 +58,19 @@ void pruebaClaseCliente() {
     std::cout << cl2.getTipoCarnet() << std::endl;
 }
 
+
+void pruebaFecha() {
+    Fecha fecha (15,12,2025);
+    fecha.setDia(45);
+    Fecha fechaIncorrecta(12,122,90);
+    // Corrección de fecha incorrecta
+    fechaIncorrecta.setDia(15);
+    fechaIncorrecta.setMes(12);
+    fechaIncorrecta.setAnio(2024);
+    std::cout << std::endl << "--- Prueba diferencia fechas" << std::endl;
+    std::cout << fecha.diferenciaCon(fechaIncorrecta) << std::endl;
+}
+
 int main() {
 
     // Prueba coches
@@ -67,6 +81,9 @@ int main() {
 
     // Prueba cliente
     pruebaClaseCliente();
+
+    // Prueba fecha
+    pruebaFecha();
 
     return 0;
 }
