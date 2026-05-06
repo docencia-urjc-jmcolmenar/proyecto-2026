@@ -6,31 +6,22 @@
 #define PROYECTO_2026_MOTO_H
 #include <string>
 
+#include "Vehiculo.h"
 
-class Moto {
+
+class Moto : public Vehiculo {
 private:
-    std::string matricula;
-    std::string marca;
-    std::string modelo;
     int cilindrada;
-    long kilometraje;
 public:
-    // Constructores
-    Moto() {}
-    Moto(std::string matricula, std::string marca, std::string modelo, int cilindrada);
+    // Constructor con parámetros invoca al constructor de la clase base
+    Moto(std::string matricula, std::string marca, std::string modelo, int cilindrada) : Vehiculo(matricula, marca, modelo) {
+        this->cilindrada = cilindrada;
+    }
     // Getters (definición inline)
-    std::string getMatricula() { return matricula; }
-    std::string getMarca() { return marca; }
-    std::string getModelo() { return modelo; }
     int getCilindrada() { return cilindrada; }
-    long getKilometraje() { return kilometraje; }
-    // Setters
-    void setMatricula(std::string matricula);
-    void setMarca(std::string marca);
-    void setModelo(std::string modelo);
+    // Setters (definición inline)
     void setCilindrada(int cilindrada);
-    void setKilometraje(long kilometraje);
-    // Otros métodos
+    // Redefinición de obtenerFicha para incluir cilindrada
     std::string obtenerFicha();
 };
 
