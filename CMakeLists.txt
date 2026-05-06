@@ -13,4 +13,6 @@ add_executable(proyecto-2026 main.cpp
         Fecha.cpp
         Fecha.h
         Persistencia.cpp
-        Persistencia.h)
+        Persistencia.h
+        Vehiculo.cpp
+        Vehiculo.h)
