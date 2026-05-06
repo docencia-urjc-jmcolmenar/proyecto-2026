@@ -6,30 +6,16 @@
 #define COCHE_H
 #include <string>
 
+#include "Vehiculo.h"
 
-class Coche {
-private:
-    std::string matricula;
-    std::string marca;
-    std::string modelo;
-    long kilometraje;
+// Hereda de vehículo
+class Coche : public Vehiculo {
 public:
     // Constructores
-    Coche() {}
     Coche(std::string cadenaJSON);
-    Coche(std::string matricula, std::string marca, std::string modelo);
-    // Getters (definición inline)
-    std::string getMatricula() { return matricula; }
-    std::string getMarca() { return marca; }
-    std::string getModelo() { return modelo; }
-    long getKilometraje() { return kilometraje; }
-    // Setters
-    void setMatricula(std::string matricula);
-    void setMarca(std::string marca);
-    void setModelo(std::string modelo);
-    void setKilometraje(long kilometraje);
+    // Constructor con parámetros invoca al constructor de la clase base
+    Coche(std::string matricula, std::string marca, std::string modelo) : Vehiculo(matricula, marca, modelo) {}
     // Otros métodos
-    std::string obtenerFicha();
     std::string aplanaObjeto();
 };
 
