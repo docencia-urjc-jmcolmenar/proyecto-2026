@@ -105,6 +105,15 @@ void pruebaFecha() {
     std::cout << "Fecha actual: " << fechaActual.toString() << std::endl;
 }
 
+void pruebaPersistencia() {
+    // Muestra los vehiculos almacenados
+    std::cout << std::endl << "Vehículos almacenados en fichero:" << std::endl;
+    // El siguiente bucle itera sobre el vector directamente
+    for (Vehiculo *v : Persistencia::cargaVehiculos()) {
+        std::cout << v->getTipoVehiculo() << ":\n" << v->obtenerFicha() << std::endl << std::endl;;
+    }
+}
+
 int main() {
 
     // Prueba coches
@@ -118,6 +127,8 @@ int main() {
 
     // Prueba fecha
     pruebaFecha();
+
+    pruebaPersistencia();
 
     return 0;
 }

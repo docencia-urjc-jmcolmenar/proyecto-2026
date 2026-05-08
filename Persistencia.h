@@ -15,7 +15,7 @@ public:
     static bool guardaCoche(Coche c);
     static std::vector<Coche> cargaCoches();
     static bool guardaVehiculo(Vehiculo *v);
-    static std::vector<Vehiculo> cargaVehiculos();
+    static std::vector<Vehiculo*> cargaVehiculos();
 };
 
 
