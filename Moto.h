@@ -23,6 +23,9 @@ public:
     void setCilindrada(int cilindrada);
     // Redefinición de obtenerFicha para incluir cilindrada
     std::string obtenerFicha();
+    std::string getTipoVehiculo() {
+        return "MOTO";
+    }
 };
 
 

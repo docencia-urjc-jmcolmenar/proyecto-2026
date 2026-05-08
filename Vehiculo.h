@@ -40,6 +40,8 @@ public:
     }
     // Otros métodos
     std::string obtenerFicha();
+    // Método virtual que debe ser implementado por las clases derivadas
+    virtual std::string getTipoVehiculo() = 0;
 };
 
 

@@ -17,6 +17,9 @@ public:
     Coche(std::string matricula, std::string marca, std::string modelo) : Vehiculo(matricula, marca, modelo) {}
     // Otros métodos
     std::string aplanaObjeto();
+    std::string getTipoVehiculo() {
+        return "COCHE";
+    }
 };
 
 
