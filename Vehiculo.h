@@ -39,7 +39,8 @@ public:
         this->kilometraje = kilometraje;
     }
     // Otros métodos
-    std::string obtenerFicha();
+    // Obtener ficha se hace virtual para que en polimorfismo se invoque a la implementación de clases derivadas
+    virtual std::string obtenerFicha();
     // Métodos virtuales que debe ser implementado por las clases derivadas
     virtual std::string getTipoVehiculo() = 0;
     // Simplifica la operación de guardar objetos
