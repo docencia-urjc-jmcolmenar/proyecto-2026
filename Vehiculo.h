@@ -40,8 +40,10 @@ public:
     }
     // Otros métodos
     std::string obtenerFicha();
-    // Método virtual que debe ser implementado por las clases derivadas
+    // Métodos virtuales que debe ser implementado por las clases derivadas
     virtual std::string getTipoVehiculo() = 0;
+    // Simplifica la operación de guardar objetos
+    virtual std::string aplanaObjeto() = 0;
 };
 
 
