@@ -16,7 +16,6 @@ std::string Coche::aplanaObjeto() {
     json += "\"kilometraje\": " + std::to_string(kilometraje);
     json += "}";
     return json;
-    return "El coche se ha aplanado";
 }
 
 Coche::Coche(std::string cadenaJSON) {
