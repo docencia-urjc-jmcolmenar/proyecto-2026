@@ -12,6 +12,7 @@
 class Coche : public Vehiculo {
 public:
     // Constructores
+    Coche() {}
     Coche(std::string cadenaJSON);
     // Constructor con parámetros invoca al constructor de la clase base
     Coche(std::string matricula, std::string marca, std::string modelo) : Vehiculo(matricula, marca, modelo) {}

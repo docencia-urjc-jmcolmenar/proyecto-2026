@@ -13,6 +13,8 @@ class Moto : public Vehiculo {
 private:
     int cilindrada;
 public:
+    Moto() {}
+    Moto(std::string cadenaJSON);
     // Constructor con parámetros invoca al constructor de la clase base
     Moto(std::string matricula, std::string marca, std::string modelo, int cilindrada) : Vehiculo(matricula, marca, modelo) {
         this->cilindrada = cilindrada;
