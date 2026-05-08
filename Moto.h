@@ -26,6 +26,7 @@ public:
     std::string getTipoVehiculo() {
         return "MOTO";
     }
+    std::string aplanaObjeto();
 };
 
 
