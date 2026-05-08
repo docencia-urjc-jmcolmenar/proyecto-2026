@@ -29,7 +29,7 @@ void pruebaClaseCoche() {
     std::cout << std::endl << "Ficha del coche Ford aplanado y reconstruido" << std::endl;
     std::cout << c3.obtenerFicha() << std::endl;
 
-
+    /* DEPRECATED, no usar porque el fichero ahora contiene datos de dos clases diferentes
     // Guarda los coches en fichero
     Persistencia::guardaCoche(c1);
     Persistencia::guardaCoche(c2);
@@ -40,6 +40,12 @@ void pruebaClaseCoche() {
     for (Coche c : Persistencia::cargaCoches()) {
         std::cout << c.obtenerFicha() << std::endl << std::endl;
     }
+    */
+
+    // Guarda los coches en fichero
+    Persistencia::guardaVehiculo(&c1);
+    Persistencia::guardaVehiculo(&c2);
+
 }
 
 // Prueba de dos objetos Moto
@@ -56,6 +62,10 @@ void pruebaClaseMoto() {
     // Muestra fichas
     std::cout << m1.obtenerFicha() << std::endl << std::endl;
     std::cout << m2.obtenerFicha() << std::endl;
+
+    // Guarda las motos en fichero
+    Persistencia::guardaVehiculo(&m1);
+    Persistencia::guardaVehiculo(&m2);
 }
 
 // Prueba de dos objetos Cliente

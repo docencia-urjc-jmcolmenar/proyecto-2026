@@ -45,3 +45,17 @@ std::vector<Coche> Persistencia::cargaCoches() {
     fichero.close();
     return coches;
 }
+
+bool Persistencia::guardaVehiculo(Vehiculo *v) {
+    std::ofstream fichero(nombreFichero, std::ios::app); // Abrir en modo append para no sobrescribir
+    if (!fichero.is_open()) {
+        std::cerr << "Error al abrir el fichero de texto." << std::endl;
+        return false;
+    }
+
+    // Escribe el vehículo en el fichero
+    fichero << v->getTipoVehiculo() << ";" << v->aplanaObjeto() << std::endl;
+
+    fichero.close();
+    return true;
+}
